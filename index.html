@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счетчик месяцев, накоплений и расходов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Счетчик месяцев, накоплений и расходов</h1>
+        
+        <label for="startDate">Выберите дату:</label>
+        <input type="date" id="startDate">
+        
+        <label for="monthlyAmount">Сколько откладывать каждый месяц (в валюте):</label>
+        <input type="number" id="monthlyAmount" placeholder="Введите сумму">
+        
+        <button id="calculateButton">Рассчитать</button>
+
+        <div class="results">
+            <p id="monthsPassed">Прошло месяцев: </p>
+            <p id="totalAmount">Общая накопленная сумма: </p>
+            <p id="remainingAmount">Остаток после расходов: </p>
+        </div>
+
+        <h2>Учет расходов</h2>
+        <label for="expenseAmount">Введите сумму расходов:</label>
+        <input type="number" id="expenseAmount" placeholder="Введите сумму">
+
+        <label for="expenseComment">Комментарий к расходу:</label>
+        <input type="text" id="expenseComment" placeholder="Введите комментарий">
+
+        <button id="addExpenseButton">Добавить расход</button>
+        
+        <h3>Список расходов:</h3>
+        <ul id="expenseList"></ul>
+        
+        <button id="clearExpensesButton">Очистить историю расходов</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
